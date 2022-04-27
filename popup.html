@@ -1,0 +1,134 @@
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="popup.js"></script>
+  <style>
+    html {
+      width: 400px;
+    }
+
+    body {
+      padding: 0px;
+      margin: 0px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      margin-bottom: 0px;
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: bold;
+      color: rgb(82, 82, 82);
+    }
+
+
+    input {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      height: 40px;
+      background-color: rgb(205, 213, 221);
+      border-width: 0px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+
+    }
+
+    select {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      height: 40px;
+      background-color: rgb(205, 213, 221);
+      border-width: 0px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+
+    }
+
+    .hero {
+      color: #fff;
+      background-color: #19bb5d;
+      padding: 7px;
+      text-align: center;
+    }
+
+    .form-container {
+      margin: 15px;
+    }
+
+    button {
+      color: #fff;
+      background-color: #19bb5d;
+      padding: 10px 20px;
+      font-weight: bold;
+      font-size: 16px;
+      border-width: 0px;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #159249;
+    }
+
+    button:active {
+      background-color: #107c3d;
+    }
+
+    #saveStatus {
+      text-align: center;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hero">
+
+    <h1>
+      <svg xmlns="http://www.w3.org/2000/svg" style="color: white; margin-right: 5px;" width="20" height="20"
+        fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647z" />
+      </svg>
+      Merge Protector for Github
+    </h1>
+  </div>
+
+  <div class="form-container">
+    <p>Apply to Repositories </p>
+    <input type="text" id="applyToRepositories" placeholder="Comma separated values, leave empty for all...">
+
+    <p>Branches Allowing Only Merge</p>
+    <input type="text" id="branchesAllowingOnlyMerge" placeholder="Comma separated values...">
+
+    <p>Branches Allowing Only Squash</p>
+    <input type="text" id="branchesAllowingOnlySquash" placeholder="Comma separated values...">
+
+    <p>Branches Allowing Only Rebase</p>
+    <input type="text" id="branchesAllowingOnlyRebase" placeholder="Comma separated values...">
+
+    <p>Default Merge Way For All Other Branches</p>
+    <select id="otherBranchesDefault">
+      <option value="squash">Squash</option>
+      <option value="merge">Merge</option>
+      <option value="rebase">Rebase</option>
+    </select>
+
+    <button id="saveButton">Save</button>
+
+    <p>
+    <div id="saveStatus"></div>
+    </p>
+
+  </div>
+
+</body>
+
+</html>
